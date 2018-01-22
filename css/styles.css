@@ -1,0 +1,8 @@
+div#board{
+    width: 900px;
+    height: 550px;
+    margin: 0 auto;
+    background: url(../img/bg-prueba.jpg);
+    background-size: cover;
+    position: relative;
+}
