@@ -7,3 +7,7 @@ div#board{
     position: relative;
     overflow: hidden;
 }
+
+.playerOne{
+    z-index: 9;
+}

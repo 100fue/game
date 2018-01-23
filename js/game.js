@@ -1,12 +1,11 @@
 function Game(){
-    this.player1 = new Player(106,50,"./img/rana-d-prueba.png","playerOne");
-    this.player2 = new Player(806,50,"./img/rana-i-prueba.png","playerTwo");
-    this.insect1 = new Insects(950,Math.ceil(Math.random()* 50) + 50,"./img/mosca-d-prueba.png",5);
-    this.insect2 = new Insects(-50,Math.ceil(Math.random()* 150) + 50,"./img/mosca-d-prueba.png",4);
-    this.insect3 = new Insects(950,Math.ceil(Math.random()* 250) + 50,"./img/mosca-d-prueba.png",3);
-    
-
-
+    this.player1 = new Player(100,50,"./img/rana-d-prueba.png","playerOne");
+    // this.player2 = new Player(806,50,"./img/rana-i-prueba.png","playerTwo");
+    this.insect1 = new Insects(950,Math.ceil(Math.random()* 100) + 150,30+"px",30+"px","./img/mosca-i-prueba.png",(Math.ceil(Math.random()*3)*-1),"insectOne");
+    this.insect2 = new Insects(0,Math.ceil(Math.random()* 100) + 150,30+"px",30+"px","./img/mosca-d-prueba.png", Math.ceil(Math.random()*2)+3, "insectTwo");
+    this.monster1 = new Insects(950,Math.ceil(Math.random()* 100) + 150,50+"px",50+"px","./img/bee-i-prueba.png", Math.ceil(Math.random()*2)+3, "monsterOne");
+    // this.insect3 = new Insects(950,Math.ceil(Math.random()* 250) + 50,"./img/mosca-d-prueba.png",3);
+    this.tongue1 = new Tongue(20,20,"tongueOne");
 }
 Game.prototype.startGame = function(){
 
