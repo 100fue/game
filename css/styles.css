@@ -5,4 +5,5 @@ div#board{
     background: url(../img/bg-prueba.jpg);
     background-size: cover;
     position: relative;
+    overflow: hidden;
 }

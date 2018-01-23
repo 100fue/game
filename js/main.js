@@ -28,7 +28,10 @@ $(document).ready(function() {
         
         // console.log(game.player1.x);
         game.player1.render();
+        // game.player1.update();
         game.insect1.update(); 
+        game.insect2.update(); 
+        game.insect3.update(); 
     }
 
     setInterval(update,1500/60);

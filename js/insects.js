@@ -1,4 +1,4 @@
-function Insects(x, y,bg,speed) {
+function Insects(x, y, bg, speed) {
     this.x = x;
     this.y = y;
     this.bg = bg;
@@ -13,8 +13,12 @@ function Insects(x, y,bg,speed) {
     this.x = (this.x - this.speed);
     this.element.css({left: this.x});
   
-    if(this.y > $("#board").height()+this.element.height()){
-      this.element.remove();
-      this.tobeDeleted = true;
-    }
+    // if(this.x == -150){
+    //   this.x = (this.x - this.speed);
+    //   this.element.css({left: this.x--});
+    // }
+    // if(this.y > $("#board").height()+this.element.height()){
+    //   this.element.remove();
+    //   this.tobeDeleted = true;
+    // }
   };
