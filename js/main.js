@@ -5,26 +5,23 @@ $(document).ready(function() {
 
     $(document).keydown(function(e){
         switch (e.keyCode){
-            case 39 : 
+            case 39 :
+            if(game.player1.canIExecute){
                 game.player1.frogInAir[0] = true;
                 game.player1.moveRight();
-                
-                if (game.player1.frogInAir[0] = true){
-                    game.player1.frogInAir[1] = false;
-                }
+                game.player1.delay();
+            }
             break;
 
             case 37 :
+            if(game.player1.canIExecute){
                 game.player1.frogInAir[1] = true;
                 game.player1.moveLeft();
-                
-                if (game.player1.frogInAir[1] = true){
-                    game.player1.frogInAir[0] = false;
-                }
+                game.player1.delay();
+            }
             break;
 
             case 77 :
-            console.log(e.keyCode)    
                 game.tongue1.tongueOut();
             break;
 
@@ -50,7 +47,7 @@ $(document).ready(function() {
         if(game.player1.frogInAir[1]){
             game.player1.moveLeft();
         }
-
+        console.log(game.player1.canIExecute)        
         game.player1.render();
         game.insect1.update(); 
         game.insect2.update();
