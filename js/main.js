@@ -55,8 +55,7 @@ $(document).ready(function() {
         game.insect1.update(); 
         game.insect2.update();
         game.monster1.update();
-        // game.tongue1.tongueOut();
-        game.tongue1.render();
+        game.tongue1.render(game.player1.x, game.player1.y);
        
      
     }

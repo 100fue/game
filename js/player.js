@@ -21,7 +21,8 @@ Player.prototype.moveRight = function(){
     if(this.y < 50 && this.x > 400){
         this.y = 50;
         this.x = 695;
-        this.element.css({"background":"url(./img/rana-i-prueba.png)","background-size":"cover"})
+        this.element.css({"background":"url(./img/rana-i-prueba.png)","background-size":"cover"});
+        this.element.removeClass("right").addClass("left");
         this.frogInAir[0] = false
     }
 }
@@ -35,7 +36,8 @@ Player.prototype.moveLeft = function(){
     if(this.y < 50 && this.x < 400){
         this.y =50;
         this.x = 100;
-        this.element.css({"background":"url(./img/rana-d-prueba.png)","background-size":"cover"})
+        this.element.css({"background":"url(./img/rana-d-prueba.png)","background-size":"cover"});
+        this.element.removeClass("left").addClass("right");
         this.frogInAir[1] = false;
 
     }

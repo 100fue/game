@@ -15,6 +15,13 @@ Tongue.prototype.tongueIn = function (){
     this.h = 0;
     this.w = 0;
 }
-Tongue.prototype.render = function (){
-    this.element.css({bottom:this.y,left:this.x,height:this.h,width:this.w});
+Tongue.prototype.render = function (x,y){
+    if($("div").hasClass("right")){
+        this.element.css({height:this.h,width:this.w,bottom: y + 42,left: x + 35});
+    }
+
+    if($("div").hasClass("left")){
+        this.element.css({height:this.h,width:this.w,bottom: y + 42,left: x - 45});
+    }
+    
 }
