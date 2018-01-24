@@ -24,7 +24,19 @@ $(document).ready(function() {
             break;
 
             case 77 :
-                game.monster1.tongueOut();
+            console.log(e.keyCode)    
+                game.tongue1.tongueOut();
+            break;
+
+        }
+    })
+
+    $(document).keyup(function(e){
+        switch (e.keyCode){
+
+            case 77 :
+            console.log(e.keyCode)    
+                game.tongue1.tongueIn();
             break;
 
         }
@@ -43,6 +55,8 @@ $(document).ready(function() {
         game.insect1.update(); 
         game.insect2.update();
         game.monster1.update();
+        // game.tongue1.tongueOut();
+        game.tongue1.render();
        
      
     }
