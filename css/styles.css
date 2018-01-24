@@ -12,6 +12,21 @@ div#board{
     z-index: 9;
 }
 
+.contOne{
+    height: 50px;
+    width: 100px;
+    background: red;
+    color: #fff;
+    position: absolute;
+}
+
+.contTwo{
+    height: 50px;
+    width: 100px;
+    background: green;
+    color: #fff;
+    position: absolute;
+}
 /* .rana-left{
     background: url(../img/rana-i-prueba.png);
     background-size: cover;
