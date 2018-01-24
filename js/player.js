@@ -10,7 +10,7 @@ function Player(x, y, bg, name) {
     $("#board").append(this.element);
     this.canIExecute=true;
 }
-Player.prototype.moveRight = function () {
+Player.prototype.moveRightOne = function () {
         if (this.x < 900) {
             this.x += this.vx;
             var a = (this.x - 400) ** 2;
@@ -24,7 +24,7 @@ Player.prototype.moveRight = function () {
             this.frogInAir[0] = false;
         }
 }
-Player.prototype.moveLeft = function () {
+Player.prototype.moveLeftOne = function () {
         if (this.x > 100) {
             this.x -= this.vx;
             var a = (this.x - 400) ** 2;
@@ -37,6 +37,35 @@ Player.prototype.moveLeft = function () {
             this.element.removeClass("left").addClass("right");
             this.frogInAir[1] = false;
         }
+}
+Player.prototype.moveRightTwo = function () {
+    if (this.x < 900) {
+        this.x += this.vx;
+        var a = (this.x - 400) ** 2;
+        this.y = (a - 101000) / -301;
+    }
+    if (this.y < 50 && this.x > 400) {
+        this.y = 50;
+        this.x = 750;
+        this.element.css({ "background": "url(./img/rana-i-prueba.png)", "background-size": "cover" });
+        this.element.removeClass("right").addClass("left");
+        this.frogInAir[0] = false;
+    }
+}
+Player.prototype.moveLeftTwo = function () {
+    if (this.x > 100) {
+        this.x -= this.vx;
+        var a = (this.x - 400) ** 2;
+        this.y = (a - 101000) / -301;
+    }
+    if (this.y < 50 && this.x < 400) {
+        this.y = 105;
+        this.x = 100;
+        this.element.css({ "background": "url(./img/rana-d-prueba.png)", "background-size": "cover" });
+        this.element.removeClass("left").addClass("right");
+        this.frogInAir[1] = false;
+    }
+    console.log(this.y);
 }
 Player.prototype.render = function () {
     this.element.css({ bottom: this.y, left: this.x });
