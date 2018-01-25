@@ -4,7 +4,7 @@ function Tongue(x,y,name){
     this.h = 0;
     this.w = 0;
     this.element = $("<div>").attr("class", name);
-    this.element.css({bottom: this.y,left: this.x,position: "absolute", height: this.h, width: this.w,background: "red"});
+    this.element.css({position: "absolute", height: this.h, width: this.w,background: "red"});
     $("#board").append(this.element);
 }
 Tongue.prototype.tongueOut = function (){
