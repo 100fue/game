@@ -23,7 +23,7 @@ $(document).ready(function() {
             }
             break;
 
-            case 77 :
+            case 32 :
                 game.tongue1.tongueOut();
             break;
 
@@ -32,12 +32,14 @@ $(document).ready(function() {
 
     $(document).keyup(function(e){
         switch (e.keyCode){
-            case 77 :  
+            case 32 :  
                 game.tongue1.tongueIn();
             break;
 
         }
     })
+    console.log($("#timer"));
+    
     function checkInsects() {
         if ($(".insectOneLeft").collision(".tongueOne").length > 0 ){
             game.cont1.sumOne();

@@ -80,3 +80,9 @@ a {
 .half_opacity {
     opacity:0.5;
 }
+
+#timerdown{
+    position: absolute;
+    left: 352px;
+    top: 14px;
+}

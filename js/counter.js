@@ -6,12 +6,16 @@ var $start 		= $("#start");
 var $pause 		= $("#pause");
 var $continue 	= $("#continue");
 
+// if($timer.css("display") === 'block'){
+//     // $("#board").hide();
+// }
+
 
 // Enable start / pause / continue buttons
 $(function(){
 	$start.on("click",function(e){
 		e.preventDefault();
-		beginTimer(60000); // 60 seconds
+		beginTimer(3000); // 30 seconds
 		
 		$start.hide();	
 		$pause.show();	
@@ -44,7 +48,7 @@ $(function(){
 	});
 	
 	// Start clock face on page load
-	beginTimer(60000);
+	beginTimer(3000);
 });
 
 // Change timer face colour
@@ -135,7 +139,8 @@ function countDownClock(dteStart,timer)
 	}
 					
 	if(window.intOffset <= 0) // If time is up
-		timeUp();	
+        timeUp();	
+        
 	else // Resersive ahoy!
 		window.t = setTimeout("countDownClock(" + dteStart + "," + timer + ")",50);
 }
@@ -195,13 +200,13 @@ function clockPause(timeElapsed,pause)
 		ctx.closePath();
 		
 		// Recursive until time has elapsed
-		if(timeElapsed < pauseTime)
-		{
-			setTimeout(function(){
-				clockPause((timeElapsed + 10),pause);
-			},10);
-		}
-	} else {
+	// 	if(timeElapsed < pauseTime)
+	// 	{
+	// 		setTimeout(function(){
+	// 			clockPause((timeElapsed + 10),pause);
+	// 		},10);
+	// 	}
+	// } else {
 		// Put fallback for browsers that don't support canvas here...
 	}
 }
@@ -210,6 +215,10 @@ function clockPause(timeElapsed,pause)
 function timeUp()
 {
 	$start.show();	
-	// $pause.hide();	
-	// $continue.hide();	
+	$pause.hide();	
+    $continue.hide();
+    setTimeout(() => alert("fin"), 1500/60);	
+    
+ 
 }
+
