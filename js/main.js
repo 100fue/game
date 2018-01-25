@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
     var game = new Game();
+    
 
     $(document).keydown(function(e){
         switch (e.keyCode){
@@ -59,11 +60,9 @@ $(document).ready(function() {
             game.createInsectTwoRight();
         }
 
-        if ($(".monster").collision(".tongueOne").length > 0 ){
+        if ($(".monster").collision(".tongueOne").length > 0 || $(".monster").collision(".playerOne").length > 0 ){
             game.cont1.restOne();
-        }
-        if ($(".monster").collision(".playerOne").length > 0){
-            game.cont1.restOne();
+            // $(".monster").remove();
         }
     }
 
@@ -84,6 +83,9 @@ $(document).ready(function() {
         }
         for(var i = 0; i < game.insTwoRight.length; i++){
             game.insTwoRight[i].update();
+        }
+        for(var i = 0; i < game.monst.length; i++){
+            game.monst[i].update();
         }
 
         // game.insectLeft.update(); 

@@ -28,3 +28,55 @@ div#board{
     background: url(../img/rana-d-prueba.png);
     background-size: cover;
 } */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background: #ddd;
+}
+
+a {
+    color: #4e00cf;
+    font-size: 175%;
+    text-decoration: none;
+    position: absolute;
+    top: 340px;
+    display: block;
+    width: 350px;
+    text-align: center;
+    color: #000;
+}
+
+#clock_wrapper {
+    position: absolute;
+    top: 1em;
+    left: 2em;
+}
+
+#clock {
+    position: relative;
+    z-index: 1;
+    width: 300px;
+    height: 300px;
+}
+
+#timer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 100%;
+    text-align: center;
+    width: 100px;
+    z-index: 2;
+    padding-top: 15%;
+    color: #000;
+    transition: opacity 350ms linear 0s;
+    -webkit-transition: opacity 350ms linear 0s;
+}
+
+.half_opacity {
+    opacity:0.5;
+}

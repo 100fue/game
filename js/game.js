@@ -18,6 +18,9 @@ function Game() {
     this.insTwoRight = [
         new Insects(950, Math.ceil(Math.random() * 100) + 250, 30 + "px", 30 + "px", "./img/mosca-d-prueba.png", (Math.ceil(Math.random()*2) +1), "insectTwoRight")
     ];
+    this.monst = [
+        new Insects(-50,Math.ceil(Math.random()* 100) + 150,50+"px",50+"px","./img/bee-i-prueba.png", 9, "monster")
+    ];
 }
 Game.prototype.startGame = function () {
 
@@ -26,26 +29,31 @@ Game.prototype.endGame = function () {
 
 }
 Game.prototype.createInsectOneLeft = function () {
-    for (var i = 0; i < 1; i++) {
+    for (var i = 0; i < 2; i++) {
         var insectOneLeft = new Insects(950, Math.ceil(Math.random() * 100) + 150, 30 + "px", 30 + "px", "./img/mosca-i-prueba.png", (Math.ceil(Math.random() * 3) * -1), "insectOneLeft");
         this.insOneLeft.push(insectOneLeft);
     }
 }
 Game.prototype.createInsectTwoLeft = function () {
-    for (var i = 0; i < 1; i++) {
+    for (var i = 0; i < 2; i++) {
         var insectTwoLeft = new Insects(950, Math.ceil(Math.random() * 100) + 150, 30 + "px", 30 + "px", "./img/mosca-i-prueba.png", (Math.ceil(Math.random() * 3) * -1), "insectTwoLeft");
         this.insTwoLeft.push(insectTwoLeft);
     }
 }
 Game.prototype.createInsectOneRight = function () {
-    for (var i = 0; i < 1; i++) {
+    for (var i = 0; i < 2; i++) {
         var insectOneRight = new Insects(950, Math.ceil(Math.random() * 100) + 150, 30 + "px", 30 + "px", "./img/mosca-d-prueba.png", (Math.ceil(Math.random()+1)), "insectOneRight");
         this.insTwoLeft.push(insectOneRight);
     }
 }
 Game.prototype.createInsectTwoRight = function () {
-    for (var i = 0; i < 1; i++) {
+    for (var i = 0; i < 2; i++) {
         var insectTwoRight = new Insects(950, Math.ceil(Math.random() * 100) + 250, 30 + "px", 30 + "px", "./img/mosca-d-prueba.png", (Math.ceil(Math.random()*2)+1), "insectTwoRight");
         this.insTwoLeft.push(insectTwoRight);
     }
 }
+// Game.prototype.createMonster = function () {
+//     for (var i = 0; i < 1; i++) {
+//         var monster = new Insects(-50,Math.ceil(Math.random()* 100) + 150,50+"px",50+"px","./img/bee-i-prueba.png", 8, "monster");
+//     }
+// }

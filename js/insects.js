@@ -23,4 +23,5 @@ Insects.prototype.update = function () {
   if (this.x >= 990) {
     this.x = 0;
   }
+
 };
