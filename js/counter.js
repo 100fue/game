@@ -217,7 +217,7 @@ function timeUp()
 	$start.show();	
 	$pause.hide();	
     $continue.hide();
-    setTimeout(() => alert("fin"), 1500/60);	
+    // setTimeout(() => alert("fin"), 1500/60);	
     
  
 }

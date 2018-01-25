@@ -2,7 +2,7 @@ div#board{
     width: 900px;
     height: 550px;
     margin: 0 auto;
-    background: url(../img/bg-prueba.jpg);
+    background: url(../img/bg-game.png);
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -12,22 +12,24 @@ div#board{
     z-index: 9;
 }
 
-.contOne{
+.spanOne{
     height: 50px;
     width: 100px;
-    background: red;
     color: #fff;
     position: absolute;
+    top: 35px;
+    left: 720px;
+    font-size: 40px;
 }
-/* .rana-left{
-    background: url(../img/rana-i-prueba.png);
+.countrab{
+    background: url(../img/rabbit-counter.png);
     background-size: cover;
+    height: 56px;
+    width: 66px;
+    position: absolute;
+    top: 20px;
+    left: 780px;
 }
-
-.rana-right{
-    background: url(../img/rana-d-prueba.png);
-    background-size: cover;
-} */
 
 * {
     font-family: Arial, Helvetica, sans-serif;

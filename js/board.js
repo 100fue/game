@@ -1,21 +1,25 @@
-function Board(x,y,name,text,span){
+function Board(x,y){
     this.x = x;
     this.y = y;
-    this.text = text;
+    // this.text = text;
     this.name = name;
     this.contUp = 0;
-    this.element = $("<div>").attr("class", name).text(this.text);
-    this.elementSpan = $("<span>").attr("class", span).text(this.contUp);
-    this.element.append(this.elementSpan);
-    this.element.css({top: this.y, left: this.x});
+    this.element = $("<div>").attr("class", name).append("<p>Julio Iglesias</p>");
+    this.elementSpan = $("<span>").attr("class", "spanOne").text(this.contUp);
+    $("#board").append(this.elementSpan);
+    // this.element.append(this.elementSpan);
+    // this.element.css({top: this.y, left: this.x});
     $("#board").append(this.element);
+    this.imgCounter = $("<div>").attr("class","countrab");
+    $("#board").append(this.imgCounter);
+
 }
 Board.prototype.render = function () {
     this.element.css({ bottom: this.y, left: this.x });
 }
 Board.prototype.sumOne = function () {
-    $(".contOne").text(this.contUp += 1);
+    $(".spanOne").text(this.contUp += 1);
 }
 Board.prototype.restOne = function () {
-    $(".contOne").text(this.contUp -= 1);
+    $(".spanOne").text(this.contUp -= 1);
 }
