@@ -39,15 +39,16 @@ $(document).ready(function() {
     })
     function checkObstacles() {
         if ($(".insect").collision(".tongueOne").length > 0 ){
-            console.log("te di!")
+            game.cont1.sumOne();
+            game.eliminateInsects();
+            game.createInsects();
         }
         if ($(".monster").collision(".tongueOne").length > 0 ){
-            console.log("te reste!")
+            game.cont1.restOne();
         }
         if ($(".monster").collision(".playerOne").length > 0){
-            console.log("te reste2!");
+            game.cont1.restOne();
         }
-
     }
 
     function update(){
@@ -56,37 +57,16 @@ $(document).ready(function() {
         game.player1.render();
         game.tongue1.render(game.player1.x, game.player1.y);
         game.cont1.render();
-        game.insect1.update(); 
-        game.insect2.update();
-        game.monster1.update();
-        checkObstacles()
-
-        var tonDomX = $(".tongueOne").css("left");
-        var tonDomY = $(".tongueOne").css("bottom");
-
-        function colisionOne(){
-            if(tonDomX < game.insect1.x + game.insect1.w  && tonDomX + 60  > game.insect1.x &&
-                tonDomY < game.insect1.y + game.insect1.h && tonDomY + 5 > game.insect1.y) {
-                console.log("pasa");
-                game.player1.eat();
-                game.cont1.sumOne();
-            }
+        for(var i = 0; i < game.insects.length; i++){
+            game.insects[i].update();
         }
-        colisionOne();   
-
+        // game.insectLeft.update(); 
+        // game.insectRight.update();
+        // game.monster1.update();
+        checkObstacles();
         
     }
     
     setInterval(update,1500/60);
-
-    
-
-    // var posXinsecOne = game.insect1.x;
-    // var posYinsecOne = game.insect1.y;
-    // var heightInsectOne = game.insect1.h;
-    // var widthInsectOne = game.insect1.w;
-    // var posXplayerOne = game.player1.x;
-    // var posYplayerOne = game.player1.y;
-
 
 });

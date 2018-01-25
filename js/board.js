@@ -16,7 +16,6 @@ Board.prototype.render = function () {
 Board.prototype.sumOne = function () {
     $(".contOne").text(this.contUp += 1);
 }
-
 Board.prototype.restOne = function () {
     $(".contOne").text(this.contUp -= 1);
 }
