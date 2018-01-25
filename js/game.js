@@ -6,11 +6,16 @@ function Game() {
     // this.monster1 = new Insects(950,Math.ceil(Math.random()* 100) + 150,50+"px",50+"px","./img/bee-i-prueba.png", Math.ceil(Math.random()*2)+3, "monster");
     this.tongue1 = new Tongue(this.player1.x + 35, this.player1.y + 42, "tongueOne");
     this.cont1 = new Board(50, 50, "contOne", "Paco", "spanOne");
-    this.insects = [
-        new Insects(950, Math.ceil(Math.random() * 100) + 150, 30 + "px", 30 + "px", "./img/mosca-i-prueba.png", (Math.ceil(Math.random() * 3) * -1), "insect",1),
-        new Insects(950, Math.ceil(Math.random() * 100) + 150, 30 + "px", 30 + "px", "./img/mosca-i-prueba.png", (Math.ceil(Math.random() * 3) * -1), "insect",2)
+    this.insOneLeft = [
+        new Insects(950, Math.ceil(Math.random() * 100) + 150, 30 + "px", 30 + "px", "./img/mosca-i-prueba.png", (Math.ceil(Math.random() * 3) * -1), "insectOneLeft")
     ];
-
+    this.insTwoLeft = [
+        new Insects(950, Math.ceil(Math.random() * 100) + 150, 30 + "px", 30 + "px", "./img/mosca-i-prueba.png", (Math.ceil(Math.random() * 3) * -1), "insectTwoLeft")
+    ];
+    this.insOneRight = [
+        new Insects(950, Math.ceil(Math.random() * 100) + 150, 30 + "px", 30 + "px", "./img/mosca-d-prueba.png", (Math.ceil(Math.random() +1)), "insectOneRight")
+       
+    ];
 }
 Game.prototype.startGame = function () {
 
@@ -18,12 +23,21 @@ Game.prototype.startGame = function () {
 Game.prototype.endGame = function () {
 
 }
-Game.prototype.createInsects = function () {
-    for (var i = 0; i < 4; i++) {
-        var insectLeft = new Insects(950, Math.ceil(Math.random() * 100) + 150, 30 + "px", 30 + "px", "./img/mosca-i-prueba.png", (Math.ceil(Math.random() * 3) * -1), "insect");
-        this.insects.push(insectLeft);
+Game.prototype.createInsectOneLeft = function () {
+    for (var i = 0; i < 1; i++) {
+        var insectOneLeft = new Insects(950, Math.ceil(Math.random() * 100) + 150, 30 + "px", 30 + "px", "./img/mosca-i-prueba.png", (Math.ceil(Math.random() * 3) * -1), "insectOneLeft");
+        this.insOneLeft.push(insectOneLeft);
     }
 }
-Game.prototype.eliminateInsects = function () {
-    $(".insect").remove();
+Game.prototype.createInsectTwoLeft = function () {
+    for (var i = 0; i < 1; i++) {
+        var insectTwoLeft = new Insects(950, Math.ceil(Math.random() * 100) + 150, 30 + "px", 30 + "px", "./img/mosca-i-prueba.png", (Math.ceil(Math.random() * 3) * -1), "insectTwoLeft");
+        this.insTwoLeft.push(insectTwoLeft);
+    }
+}
+Game.prototype.createInsectOneRight = function () {
+    for (var i = 0; i < 1; i++) {
+        var insectOneRight = new Insects(950, Math.ceil(Math.random() * 100) + 150, 30 + "px", 30 + "px", "./img/mosca-d-prueba.png", (Math.ceil(Math.random()+1)), "insectOneRight");
+        this.insTwoLeft.push(insectOneRight);
+    }
 }

@@ -37,12 +37,23 @@ $(document).ready(function() {
 
         }
     })
-    function checkObstacles() {
-        if ($(".insect").collision(".tongueOne").length > 0 ){
+    function checkInsects() {
+        if ($(".insectOneLeft").collision(".tongueOne").length > 0 ){
             game.cont1.sumOne();
-            game.eliminateInsects();
-            game.createInsects();
+            $(".insectOneLeft").remove();
+            game.createInsectOneLeft();
         }
+        if ($(".insectTwoLeft").collision(".tongueOne").length > 0 ){
+            game.cont1.sumOne();
+            $(".insectTwoLeft").remove();
+            game.createInsectTwoLeft();
+        }
+        if ($(".insectOneRight").collision(".tongueOne").length > 0 ){
+            game.cont1.sumOne();
+            $(".insectOneRight").remove();
+            game.createInsectOneRight();
+        }
+
         if ($(".monster").collision(".tongueOne").length > 0 ){
             game.cont1.restOne();
         }
@@ -57,13 +68,20 @@ $(document).ready(function() {
         game.player1.render();
         game.tongue1.render(game.player1.x, game.player1.y);
         game.cont1.render();
-        for(var i = 0; i < game.insects.length; i++){
-            game.insects[i].update();
+        for(var i = 0; i < game.insOneLeft.length; i++){
+            game.insOneLeft[i].update();
         }
+        for(var i = 0; i < game.insTwoLeft.length; i++){
+            game.insTwoLeft[i].update();
+        }
+        for(var i = 0; i < game.insOneRight.length; i++){
+            game.insOneRight[i].update();
+        }
+
         // game.insectLeft.update(); 
         // game.insectRight.update();
         // game.monster1.update();
-        checkObstacles();
+        checkInsects();
         
     }
     
