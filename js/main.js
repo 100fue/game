@@ -53,6 +53,11 @@ $(document).ready(function() {
             $(".insectOneRight").remove();
             game.createInsectOneRight();
         }
+        if ($(".insectTwoRight").collision(".tongueOne").length > 0 ){
+            game.cont1.sumOne();
+            $(".insectTwoRight").remove();
+            game.createInsectTwoRight();
+        }
 
         if ($(".monster").collision(".tongueOne").length > 0 ){
             game.cont1.restOne();
@@ -76,6 +81,9 @@ $(document).ready(function() {
         }
         for(var i = 0; i < game.insOneRight.length; i++){
             game.insOneRight[i].update();
+        }
+        for(var i = 0; i < game.insTwoRight.length; i++){
+            game.insTwoRight[i].update();
         }
 
         // game.insectLeft.update(); 

@@ -14,7 +14,9 @@ function Game() {
     ];
     this.insOneRight = [
         new Insects(950, Math.ceil(Math.random() * 100) + 150, 30 + "px", 30 + "px", "./img/mosca-d-prueba.png", (Math.ceil(Math.random() +1)), "insectOneRight")
-       
+    ];
+    this.insTwoRight = [
+        new Insects(950, Math.ceil(Math.random() * 100) + 250, 30 + "px", 30 + "px", "./img/mosca-d-prueba.png", (Math.ceil(Math.random()*2) +1), "insectTwoRight")
     ];
 }
 Game.prototype.startGame = function () {
@@ -39,5 +41,11 @@ Game.prototype.createInsectOneRight = function () {
     for (var i = 0; i < 1; i++) {
         var insectOneRight = new Insects(950, Math.ceil(Math.random() * 100) + 150, 30 + "px", 30 + "px", "./img/mosca-d-prueba.png", (Math.ceil(Math.random()+1)), "insectOneRight");
         this.insTwoLeft.push(insectOneRight);
+    }
+}
+Game.prototype.createInsectTwoRight = function () {
+    for (var i = 0; i < 1; i++) {
+        var insectTwoRight = new Insects(950, Math.ceil(Math.random() * 100) + 250, 30 + "px", 30 + "px", "./img/mosca-d-prueba.png", (Math.ceil(Math.random()*2)+1), "insectTwoRight");
+        this.insTwoLeft.push(insectTwoRight);
     }
 }
