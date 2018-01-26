@@ -19,11 +19,13 @@ Tongue.prototype.tongueIn = function (){
 
 Tongue.prototype.render = function (x,y){
     if($("div").hasClass("right")){
-        this.element.css({height:this.h,width:this.w,bottom: y + 42,left: x + 35});
+        this.element.css({height:this.h,width:this.w,bottom: y + 34,left: x + 25});
+        
     }
 
     if($("div").hasClass("left")){
-        this.element.css({height:this.h,width:this.w,bottom: y + 42,left: x - 45});
+        this.element.css({height:this.h,width:this.w,bottom: y + 34,left: x - 35});
+        
     }
 
 }

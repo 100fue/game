@@ -4,7 +4,7 @@ function Board(x,y){
     // this.text = text;
     this.name = name;
     this.contUp = 0;
-    this.element = $("<div>").attr("class", name).append("<p>Julio Iglesias</p>");
+    this.element = $("<div>").attr("class", name).append("<p>Don Julio Iglesias</p>");
     this.elementSpan = $("<span>").attr("class", "spanOne").text(this.contUp);
     $("#board").append(this.elementSpan);
     // this.element.append(this.elementSpan);

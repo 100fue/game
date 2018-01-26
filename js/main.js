@@ -25,6 +25,15 @@ $(document).ready(function() {
 
             case 32 :
                 game.tongue1.tongueOut();
+
+                if($(".playerOne").hasClass("right")){
+                    $(".playerOne").css({ "background": "url(./img/julio-mouth-i.png)", "background-size": "cover" });
+                }
+
+                if($(".playerOne").hasClass("left")){
+                    $(".playerOne").css({ "background": "url(./img/julio-mouth-d.png)", "background-size": "cover" });
+                }
+
             break;
 
         }
@@ -34,6 +43,13 @@ $(document).ready(function() {
         switch (e.keyCode){
             case 32 :  
                 game.tongue1.tongueIn();
+                if($(".playerOne").hasClass("right")){
+                    $(".playerOne").css({ "background": "url(./img/julio-i.png)", "background-size": "cover" });
+                }
+
+                if($(".playerOne").hasClass("left")){
+                    $(".playerOne").css({ "background": "url(./img/julio-d.png)", "background-size": "cover" });
+                }
             break;
 
         }
