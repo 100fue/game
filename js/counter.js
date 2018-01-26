@@ -216,9 +216,20 @@ function timeUp()
 {
 	$start.show();	
 	$pause.hide();	
-    $continue.hide();
+	$continue.hide();
+	
+	
 	// setTimeout(() => alert("fin"), 1500/60);	
-    
+	// var fin = $("")
+	if($(".spanOne").text() <= 0){
+		console.log("entra");
+		$(".no").css("display", "block");
+	}
+
+	if($(".spanOne").text() > 0){
+		console.log("entra");
+		$(".yes").css("display", "block");
+	}
  
 }
 
