@@ -20,16 +20,67 @@ div#start{
 
 div#start a{
     color: #fff;
+    border: 2px solid #fff;
     font-size: 20px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: 460px;
-    height: 50px!important;
-    letter-spacing: .5px;
+    height: 20px;
+    width: 200px;
+    padding: 10px 0;
+    letter-spacing: 1px;
 }
 div#start a span{
     display: block;
+}
+
+.yes{
+    display: none;
+    width: 900px;
+    height: 550px;
+    margin: 0 auto;
+    background: url(../img/iron-yes.png);
+    z-index: 999;
+    position: relative; 
+}
+
+.yes a{
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 460px;
+    height: 20px;
+    width: 200px;
+    padding: 10px 0;
+    letter-spacing: 1px;
+}
+
+.no{
+    display: none;
+    width: 900px;
+    height: 550px;
+    margin: 0 auto;
+    background: url(../img/iron-no.png);
+    z-index: 999;
+    position: relative; 
+}
+
+.no a{
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 460px;
+    height: 20px;
+    width: 200px;
+    padding: 10px 0;
+    letter-spacing: 1px;
 }
 
 p{

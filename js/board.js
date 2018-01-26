@@ -7,6 +7,10 @@ function Board(x,y){
     this.element = $("<div>").attr("class", name).append("<p>Don Julio Iglesias</p>");
     this.elementSpan = $("<span>").attr("class", "spanOne").text(this.contUp);
     $("#board").append(this.elementSpan);
+    this.yes = $("<div>").attr("class", "yes").append("<a href='index.html'>JUGAR OTRA VEZ</a>");
+    $("#board").append(this.yes);
+    this.no = $("<div>").attr("class", "no").append("<a href='index.html'>JUGAR OTRA VEZ</a>");
+    $("#board").append(this.no);
     // this.element.append(this.elementSpan);
     // this.element.css({top: this.y, left: this.x});
     $("#board").append(this.element);
