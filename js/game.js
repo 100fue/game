@@ -18,12 +18,17 @@ function Game() {
     this.monst = [
         new Insects(-50,Math.ceil(Math.random()* 100) + 150,60+"px",75+"px","./img/chicken.png", 9, "monster")
     ];
-}
-Game.prototype.startGame = function () {
 
-}
-Game.prototype.endGame = function () {
-
+    this.bgsound = new Audio();
+    this.bgsound.src = "./audio/background-music.mp3";
+    this.soundTwo = new Audio();
+    this.soundTwo.src = "./audio/chiquito_de_la_calzada_al_ataque.mp3";
+    this.soundThree = new Audio();
+    this.soundThree.src = "./audio/chiquito_de_la_calzada_fuegorrrlll.mp3";
+    this.jump = new Audio();
+    this.jump.src = "./audio/jump.wav";
+    this.tongue = new Audio();
+    this.tongue.src = "./audio/tongue.wav";
 }
 Game.prototype.createInsectOneLeft = function () {
     for (var i = 0; i < 1; i++) {
@@ -49,8 +54,3 @@ Game.prototype.createInsectTwoRight = function () {
         this.insTwoLeft.push(insectTwoRight);
     }
 }
-// Game.prototype.createMonster = function () {
-//     for (var i = 0; i < 1; i++) {
-//         var monster = new Insects(-50,Math.ceil(Math.random()* 100) + 150,50+"px",50+"px","./img/bee-i-prueba.png", 8, "monster");
-//     }
-// }

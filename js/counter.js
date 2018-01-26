@@ -15,7 +15,7 @@ var $continue 	= $("#continue");
 $(function(){
 	$start.on("click",function(e){
 		e.preventDefault();
-		beginTimer(3000); // 30 seconds
+		beginTimer(30000); // 30 seconds
 		
 		$start.hide();	
 		$pause.show();	
@@ -48,7 +48,7 @@ $(function(){
 	});
 	
 	// Start clock face on page load
-	beginTimer(3000);
+	beginTimer(30000);
 });
 
 // Change timer face colour
@@ -114,7 +114,7 @@ function countDownClock(dteStart,timer)
 		ctx.globalAlpha = 1;
 		ctx.arc(150,150,140,0,6.283,false);
 		ctx.arc(150,150,105,6.283,((Math.PI*2)),true);
-		ctx.fillStyle = "#bbb";
+		ctx.fillStyle = "#7c73f2";
 		ctx.fill();
 		ctx.closePath();
 		
@@ -130,7 +130,7 @@ function countDownClock(dteStart,timer)
 		// Centre circle
 		ctx.beginPath();
 		ctx.arc(150,150,105,0,6.283,false);
-		ctx.fillStyle = "#fff";
+		ctx.fillStyle = "transparent";
 		ctx.fill();
 		ctx.closePath();
 		
@@ -198,16 +198,7 @@ function clockPause(timeElapsed,pause)
 		ctx.fillStyle = "#fff";
 		ctx.fill();
 		ctx.closePath();
-		
-		// Recursive until time has elapsed
-	// 	if(timeElapsed < pauseTime)
-	// 	{
-	// 		setTimeout(function(){
-	// 			clockPause((timeElapsed + 10),pause);
-	// 		},10);
-	// 	}
-	// } else {
-		// Put fallback for browsers that don't support canvas here...
+
 	}
 }
 

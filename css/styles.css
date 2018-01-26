@@ -13,7 +13,6 @@ div#start{
     height: 550px;
     margin: 0 auto;
     background: url(../img/iron-start.png);
-    /* background-size: cover; */
     position: relative;
     overflow: hidden;
 }
@@ -26,9 +25,7 @@ div#start a{
     left: 50%;
     transform: translateX(-50%);
     top: 460px;
-    height: 20px;
-    width: 200px;
-    padding: 10px 0;
+    padding: 10px 30px;
     letter-spacing: 1px;
 }
 div#start a span{
@@ -53,9 +50,7 @@ div#start a span{
     left: 50%;
     transform: translateX(-50%);
     top: 460px;
-    height: 20px;
-    width: 200px;
-    padding: 10px 0;
+    padding: 10px 30px;
     letter-spacing: 1px;
 }
 
@@ -77,18 +72,16 @@ div#start a span{
     left: 50%;
     transform: translateX(-50%);
     top: 460px;
-    height: 20px;
-    width: 200px;
-    padding: 10px 0;
+    padding: 10px 30px;
     letter-spacing: 1px;
 }
 
 p{
     position: absolute;
-    top: 10px;
+    top: 25px;
     left: 50px;
     color: #fff;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .playerOne{
@@ -119,45 +112,38 @@ p{
     font-weight: bold;
 }
 
+a{
+    text-decoration: none;
+}
+
 body {
     background: #ddd;
 }
 
-a {
-    color: #4e00cf;
-    font-size: 175%;
-    text-decoration: none;
-    position: absolute;
-    top: 340px;
-    display: block;
-    width: 350px;
-    text-align: center;
-    color: #000;
-}
 
 #clock_wrapper {
     position: absolute;
-    top: 1em;
-    left: 2em;
+    top: 5px;
+    left: 5em;
 }
 
 #clock {
     position: relative;
     z-index: 1;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
 }
 
 #timer {
     position: absolute;
-    top: 0;
+    top: -7px;
     left: 0;
-    font-size: 100%;
+    font-size: 20px;
     text-align: center;
-    width: 100px;
+    width: 67px;
     z-index: 2;
     padding-top: 15%;
-    color: #000;
+    color: #fff;
     transition: opacity 350ms linear 0s;
     -webkit-transition: opacity 350ms linear 0s;
 }

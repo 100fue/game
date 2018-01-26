@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
     var game = new Game();
+    game.bgsound.play();
+
     
 
     $(document).keydown(function(e){
@@ -11,6 +13,7 @@ $(document).ready(function() {
                 game.player1.moveRightOne();
                 game.player1.delay();
                 game.player1.directionRigth=false;
+                game.jump.play();
             }
             break;
 
@@ -20,11 +23,13 @@ $(document).ready(function() {
                 game.player1.moveLeftOne();
                 game.player1.delay();
                 game.player1.directionRigth=true;
+                game.jump.play();
             }
             break;
 
             case 32 :
                 game.tongue1.tongueOut();
+                game.tongue.play();
 
                 if($(".playerOne").hasClass("right")){
                     $(".playerOne").css({ "background": "url(./img/julio-mouth-i.png)", "background-size": "cover" });
@@ -54,33 +59,37 @@ $(document).ready(function() {
 
         }
     })
-    console.log($("#timer"));
     
     function checkInsects() {
         if ($(".insectOneLeft").collision(".tongueOne").length > 0 ){
             game.cont1.sumOne();
+            game.soundTwo.play();
             $(".insectOneLeft").remove();
             game.createInsectOneLeft();
+            
         }
         if ($(".insectTwoLeft").collision(".tongueOne").length > 0 ){
             game.cont1.sumOne();
+            game.soundTwo.play();
             $(".insectTwoLeft").remove();
             game.createInsectTwoLeft();
         }
         if ($(".insectOneRight").collision(".tongueOne").length > 0 ){
             game.cont1.sumOne();
+            game.soundTwo.play();
             $(".insectOneRight").remove();
             game.createInsectOneRight();
         }
         if ($(".insectTwoRight").collision(".tongueOne").length > 0 ){
             game.cont1.sumOne();
+            game.soundTwo.play();
             $(".insectTwoRight").remove();
             game.createInsectTwoRight();
         }
 
         if ($(".monster").collision(".tongueOne").length > 0 || $(".monster").collision(".playerOne").length > 0 ){
             game.cont1.restOne();
-            // $(".monster").remove();
+            game.soundThree.play();
         }
     }
 
@@ -105,12 +114,7 @@ $(document).ready(function() {
         for(var i = 0; i < game.monst.length; i++){
             game.monst[i].update();
         }
-
-        // game.insectLeft.update(); 
-        // game.insectRight.update();
-        // game.monster1.update();
-        checkInsects();
-        
+        checkInsects();  
     }
     
     setInterval(update,1500/60);

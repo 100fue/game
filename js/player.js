@@ -46,7 +46,6 @@ Player.prototype.moveLeftOne = function () {
 Player.prototype.eat = function (){
 
     $(".insectOne").css("display","none"); 
-    // $(".contOne").text("display","none"); 
 
 }
 Player.prototype.render = function () {
