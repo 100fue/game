@@ -6,9 +6,9 @@ function Board(x,y){
     this.element = $("<div>").attr("class", name).append("<p>Don Julio Iglesias</p>");
     this.elementSpan = $("<span>").attr("class", "spanOne").text(this.contUp);
     $("#board").append(this.elementSpan);
-    this.yes = $("<div>").attr("class", "yes").append("<a href='game.html'>JUGAR OTRA VEZ</a>");
+    this.yes = $("<div>").attr("class", "yes").append("<a href='play.html'>JUGAR OTRA VEZ</a>");
     $("#board").append(this.yes);
-    this.no = $("<div>").attr("class", "no").append("<a href='game.html'>JUGAR OTRA VEZ</a>");
+    this.no = $("<div>").attr("class", "no").append("<a href='play.html'>JUGAR OTRA VEZ</a>");
     $("#board").append(this.no);
     $("#board").append(this.element);
     this.imgCounter = $("<div>").attr("class","countrab");
